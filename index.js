@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-/*
+
 app.use(
   session({
     secret: SESSION_SECRET,
@@ -38,14 +38,14 @@ app.use(
     saveUninitialized: true,
   })
 );
-*/
+/*
 app.use(
    auth({
       secret: SESSION_SECRET,
       auth0Logout: true,
       baseURL: APP_URL,
    })
-);
+);*/
 
 const expenses = [
   {
