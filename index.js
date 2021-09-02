@@ -5,7 +5,9 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const path = require("path");
 const { createServer } = require("http");
-const { auth } = require("express-openid-connect");
+
+//const { auth } = require("express-openid-connect");
+
 const {
   checkUrl,
   APP_URL, // Public URL for this app
@@ -28,6 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+/*
 app.use(
   session({
     secret: SESSION_SECRET,
@@ -35,7 +38,7 @@ app.use(
     saveUninitialized: true,
   })
 );
-
+*/
 app.use(
    auth({
       secret: SESSION_SECRET,
